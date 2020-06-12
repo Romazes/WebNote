@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebNote", "WebNote\WebNote.csproj", "{D128D4C6-7C11-4AA3-89CC-738BE3FE2B24}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebNote.Core", "WebNote.Core\WebNote.Core.csproj", "{463CF11B-0FA5-42F7-A98B-2CAD4AC1ED4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebNote.Infrastructure", "WebNote.Infrastructure\WebNote.Infrastructure.csproj", "{B731394C-4CA6-43DA-8BCB-E9BDEC8639B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{D128D4C6-7C11-4AA3-89CC-738BE3FE2B24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D128D4C6-7C11-4AA3-89CC-738BE3FE2B24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D128D4C6-7C11-4AA3-89CC-738BE3FE2B24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{463CF11B-0FA5-42F7-A98B-2CAD4AC1ED4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{463CF11B-0FA5-42F7-A98B-2CAD4AC1ED4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{463CF11B-0FA5-42F7-A98B-2CAD4AC1ED4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{463CF11B-0FA5-42F7-A98B-2CAD4AC1ED4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B731394C-4CA6-43DA-8BCB-E9BDEC8639B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B731394C-4CA6-43DA-8BCB-E9BDEC8639B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B731394C-4CA6-43DA-8BCB-E9BDEC8639B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B731394C-4CA6-43DA-8BCB-E9BDEC8639B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
