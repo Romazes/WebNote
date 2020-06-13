@@ -43,6 +43,8 @@ namespace WebNote.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(int id, NoteItem noteItem)
         {
+            noteItem.Id = id;
+
             if (id != noteItem.Id)
             {
                 return BadRequest();
