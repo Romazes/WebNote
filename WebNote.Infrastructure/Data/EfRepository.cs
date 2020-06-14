@@ -25,13 +25,20 @@ namespace WebNote.Infrastructure.Data
             return entity;
         }
 
-        public async Task DeleteAsync(T entity)
+        public async Task<T> DeleteAsync(int? id)
         {
+            var entity = await _appDbContext.Set<T>().FindAsync(id);
+            if (entity == null)
+            { 
+                return entity;
+            }
+
             _appDbContext.Set<T>().Remove(entity);
             await _appDbContext.SaveChangesAsync();
+            return entity;
         }
 
-        public async Task<T> GetByIdAsync(int id)
+        public async Task<T> GetByIdAsync(int? id)
         {
             return await _appDbContext.Set<T>().FindAsync(id);
         }

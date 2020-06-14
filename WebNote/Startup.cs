@@ -28,10 +28,14 @@ namespace WebNote
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<AppDbContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("AppDbContext")));
+            services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("NotesDB"));
+
+            //services.AddDbContext<AppDbContext>(options =>
+            //        options.UseSqlServer(Configuration.GetConnectionString("AppDbContext")));
 
             services.AddScoped(typeof(IAsyncRepository<>), typeof(EfRepository<>));
+
+            services.AddCors();
 
             services.AddControllers();
         }
@@ -39,6 +43,12 @@ namespace WebNote
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors(options =>
+            options.WithOrigins("http://localhost:3000")
+                   .AllowAnyHeader()
+                   .AllowAnyMethod()
+            );
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
