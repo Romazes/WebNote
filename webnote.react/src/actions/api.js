@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = "https://localhost:44344/api/"
+const baseUrl = "https://localhost:5001/api/"
 
 export default {
     note(url = baseUrl + 'notes/'){
