@@ -28,10 +28,10 @@ namespace WebNote
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("NotesDB"));
+            //services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("NotesDB"));
 
-            //services.AddDbContext<AppDbContext>(options =>
-            //        options.UseSqlServer(Configuration.GetConnectionString("AppDbContext")));
+            services.AddDbContext<AppDbContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("AppDbContext")));
 
             services.AddScoped(typeof(IAsyncRepository<>), typeof(EfRepository<>));
 
