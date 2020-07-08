@@ -19,3 +19,13 @@ It's my first experience with React-part and some things can look very strange.
    - Repository pattern
    - EF
    - Independent layers
+
+## End-To-End Testing with Cypress
+
+Now you need open Cypress from your project root one of the following ways:
+
+- `./node_modules/.bin/cypress open`
+
+Or by using npx
+
+- `npx cypress open`
