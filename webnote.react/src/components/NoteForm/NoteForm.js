@@ -68,6 +68,7 @@ const NoteForm = ({ ...props }) => {
       <Grid container spacing={2}>
         <Grid item xs={4}>
           <TextField
+            className="titleField"
             name="name"
             label="Topic"
             variant="filled"
@@ -80,6 +81,7 @@ const NoteForm = ({ ...props }) => {
         </Grid>
         <Grid item xs={8}>
           <TextField
+            className="descriptionField"
             name="description"
             label="Description"
             placeholder="..."

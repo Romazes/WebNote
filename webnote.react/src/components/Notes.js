@@ -72,6 +72,7 @@ const Notes = ({ ...props }) => {
                             </Button>
                             <Button>
                               <DeleteIcon
+                                className="deleteButton"
                                 color="secondary"
                                 onClick={() => onDelete(record.id)}
                               />
