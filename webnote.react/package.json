@@ -48,6 +48,6 @@
     "@types/react-redux": "^7.1.9",
     "@types/react-router-dom": "^5.1.5",
     "@types/react-toast-notifications": "^2.4.0",
-    "cypress": "^4.10.0"
+    "cypress": "^13.5.0"
   }
 }
